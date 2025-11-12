@@ -1,2 +1,2 @@
 # SiloPH
-prototype merchandise// shopping website
+prototype merchandise // shopping website
