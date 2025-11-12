@@ -838,7 +838,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <a href="confirmation.html?orderID=${order.id}" class="order-item-info-link">
                             <div class="order-item-info">
                                 <h4>Order: ${order.id}</h4>
-                                <p>Date: ${order.date}</p>
+                                <p>Arrival: ${order.arrival}</p>
                                 <p>Total: ${formatCurrency(order.total)}</p>
                                 <p>Status: ${order.status}</p>
                             </div>
@@ -1360,5 +1360,6 @@ document.addEventListener("DOMContentLoaded", () => {
             singleImageEl.style.display = 'none';
         }
     }
+
 
 });
