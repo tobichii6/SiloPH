@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - Silo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul class="nav-primary">
+                <li>
+                    <a href="index.html" class="nav-logo">
+                        <img src="https://uploads.onecompiler.io/4438u64ww/4438u3mt4/silo%20logo%203%20black.png" alt="Silo Logo" class="nav-logo-icon" />
+                        <span>SILO</span>
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav-utility">
+                <li><a href="account.html" id="account-nav-link">Account</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="cart.html" id="cart-link">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Order Confirmed</h1>
+        </section>
+
+        <section class="content-container order-details">
+            
+            <a href="account.html" id="back-to-dashboard-link" style="display: none;">
+                &larr; Back to My Orders
+            </a>
+            <h2>Thank You, <span id="order-user-name"></span>!</h2>
+            <p class="order-subtitle">Your order is on its way.</p>
+
+            <div class="order-meta">
+                <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+                <p><strong>Expected Arrival:</strong> <span id="order-date"></span></p>
+                <p><strong>Shipping To:</strong> <span id="order-address"></span></p>
+            </div>
+
+            <h3>Order Summary</h3>
+            <div id="order-items-container">
+                </div>
+            <div id="order-total-summary">
+                </div>
+            <a href="shop.html" class="btn btn-primary" id="continue-shopping-btn">Continue Shopping</a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

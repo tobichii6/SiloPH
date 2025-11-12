@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul class="nav-primary">
+                <li>
+                    <a href="index.html" class="nav-logo">
+                        <img src="https://uploads.onecompiler.io/4438u64ww/4438u3mt4/silo%20logo%203%20black.png" alt="Silo Logo" class="nav-logo-icon" />
+                        <span>SILO</span>
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav-utility">
+                <li><a href="account.html" id="account-nav-link">Account</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="cart.html" id="cart-link">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-container product-detail-layout" id="product-detail-container">
+            
+            <div class="product-detail-image" id="product-image-container">
+                
+                <img src="" alt="Loading product..." id="product-image-single" class="product-slider-image">
+                
+                <div id="product-carousel-slider" class="product-slider">
+                    </div>
+                <button class="slider-btn prev" id="slider-btn-prev">&lt;</button>
+                <button class="slider-btn next" id="slider-btn-next">&gt;</button>
+            </div>
+
+            <div class="product-detail-info">
+                <h1 id="product-name">Loading...</h1>
+                <p class="product-detail-price" id="product-price"> </p>
+                <p class="product-detail-description" id="product-description">
+                    Loading description...
+                </p>
+
+                <div class="product-detail-swatches" id="product-swatch-container">
+                    </div>
+                
+                <div class="product-detail-variants">
+                    <div class="variant-header">
+                        <label class="variant-label">Size:</label>
+                        <a href="#" id="size-guide-link" class="form-link">Size Guide</a>
+                    </div>
+                    <div class="variant-options" id="product-size-options">
+                        <button class="variant-btn" data-size="2XS">2XS</button>
+                        <button class="variant-btn" data-size="XS">XS</button>
+                        <button class="variant-btn" data-size="S">S</button>
+                        <button class="variant-btn" data-size="M">M</button>
+                        <button class="variant-btn" data-size="L">L</button>
+                        <button class="variant-btn" data-size="XL">XL</button>
+                        <button class="variant-btn" data-size="2XL">2XL</button>
+                    </div>
+                    <p class="variant-error-message" id="size-error-message" style="display: none;">
+                        Please select a size.
+                    </p>
+                </div>
+                <button class="btn btn-primary add-to-cart" id="product-detail-add-to-cart-btn">
+                    <span class="btn-text">Add to Cart</span>
+                </button>
+
+                <div class="faq-accordion product-detail-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">Sizing & Fit</button>
+                        <div class="faq-answer">
+                            <p>This item is unisex and features a relaxed, slightly oversized fit. We recommend your true size for the intended look. Size down for a more traditional fit. See our 'Size Guide' for full measurements.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Materials & Care</button>
+                        <div class="faq-answer">
+                            <p>100% Premium Cotton. Machine wash cold, tumble dry low. Do not bleach. Iron on low heat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+    </footer>
+
+    <div class="modal-overlay" id="size-guide-modal" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+            <h2>General Size Guide</h2>
+            <p>Our unisex sizing is based on the following general measurements.</p>
+            
+            <table class="size-guide-table">
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Height Range</th>
+                        <th>Width Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2XS</td>
+                        <td>125–135 cm</td>
+                        <td>60–70 cm</td>
+                    </tr>
+                    <tr>
+                        <td>XS</td>
+                        <td>135–150 cm</td>
+                        <td>70–80 cm</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>150–165 cm</td>
+                        <td>80–90 cm</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>165–175 cm</td>
+                        <td>90–100 cm</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>175–182 cm</td>
+                        <td>100–110 cm</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>182–188 cm</td>
+                        <td>110–120 cm</td>
+                    </tr>
+                    <tr>
+                        <td>2XL</td>
+                        <td>188+ cm</td>
+                        <td>120–130 cm</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

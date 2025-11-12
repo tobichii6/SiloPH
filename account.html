@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Silo</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="account-page"> 
+    <header class="main-header">
+        <nav class="navbar">
+            <ul class="nav-primary">
+                <li>
+                    <a href="index.html" class="nav-logo">
+                        <img src="https://uploads.onecompiler.io/4438u64ww/4438u3mt4/silo%20logo%203%20black.png" alt="Silo Logo" class="nav-logo-icon" />
+                        <span>SILO</span>
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <ul class="nav-utility">
+                <li><a href="account.html" id="account-nav-link" class="active">Account</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="cart.html" id="cart-link">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header" id="account-page-header">
+            <h1 id="account-header-title">My Account</h1>
+            <p id="account-header-subtitle"></p>
+        </section>
+
+        <section class="content-container account-container" id="account-login-view">
+            <div class="account-form-wrapper">
+                <div class="account-tabs">
+                    <button class="account-tab-btn active" data-tab="login">Login</button>
+                    <button class="account-tab-btn" data-tab="signup">Sign Up</button>
+                </div>
+
+                <div class="account-form-content active" id="login">
+                    <h2>Welcome Back</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <a href="#" class="form-link">Forgot your password?</a>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Login</span>
+                            <span class="btn-icon"></span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="account-form-content" id="signup">
+                    <h2>Create Your Sanctuary</h2>
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label for="signup-name">Name</label>
+                            <input type="text" id="signup-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="password" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Create Account</span>
+                            <span class="btn-icon"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-container account-dashboard" id="account-dashboard-view" style="display: none;">
+            <nav class="account-nav">
+                <button class="account-tab-btn active" data-tab="pending-orders">Pending Orders</button>
+                <button class="account-tab-btn" data-tab="order-history">Order History</button>
+                <button class="account-tab-btn" data-tab="settings">Profile & Settings</button>
+                
+                <button class="account-tab-btn" data-tab="logout" id="logout-btn">
+                    <span class="btn-text">Logout</span>
+                    <span class="btn-icon"></span>
+                </button>
+            </nav>
+            
+            <div class="account-content-wrapper">
+                <div class="account-form-content active" id="pending-orders">
+                    <h2>Pending Orders</h2>
+                    <div id="pending-orders-container">
+                        </div>
+                    <p id="no-pending-orders-message" style="display: none;">You have no pending orders.</p>
+                </div>
+                
+                <div class="account-form-content" id="order-history">
+                    <h2>Order History</h2>
+                    <div id="order-history-container">
+                        </div>
+                    <p id="no-order-history-message" style="display: none;">You have no completed or cancelled orders.</p>
+                </div>
+                
+                <div class="account-form-content" id="settings">
+                    <h2>Profile & Settings</h2>
+                    <form id="settings-form">
+                        <div class="form-group">
+                            <label for="settings-name">Name</label>
+                            <input type="text" id="settings-name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="settings-email">Email (Cannot be changed)</label>
+                            <input type="email" id="settings-email" name="email" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="settings-password">New Password</label>
+                            <input type="password" id="settings-password" name="password" placeholder="Leave blank to keep current password">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="settings-address">Default Shipping Address</label>
+                            <input type="text" id="settings-address" name="address" placeholder="e.g., 123 Silo St, Manila">
+                        </div>
+                        
+                        <h3 class="section-title-small" style="text-align: left; margin-top: 2rem;">Default Payment</h3>
+                        <p style="margin-top: -1rem; margin-bottom: 1rem;">This will be pre-selected at checkout.</p>
+                        
+                        <div class="form-group">
+                            <div class="payment-option">
+                                <input type="radio" id="settings-payment-cod" name="settings-payment" value="Cash on Delivery">
+                                <label for="settings-payment-cod">Cash on Delivery</label>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="settings-payment-ewallet" name="settings-payment" value="E-Wallet (GCash/Maya)">
+                                <label for="settings-payment-ewallet">E-Wallet (GCash/Maya)</label>
+                            </div>
+                            <div id="settings-ewallet-details" class="payment-details" style="display: none;">
+                                <div class="payment-option">
+                                    <input type="radio" id="settings-payment-gcash" name="settings-ewallet-type" value="GCash">
+                                    <label for="settings-payment-gcash">GCash</label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="settings-payment-maya" name="settings-ewallet-type" value="Maya">
+                                    <label for="settings-payment-maya">Maya</label>
+                                </div>
+                                <div id="settings-ewallet-number-container" class="form-group" style="display: none; margin-top: 1rem;">
+                                    <label for="settings-ewallet-number">Mobile Number</label>
+                                    <input type="tel" id="settings-ewallet-number" name="settings-ewallet-number" placeholder="09XX XXX XXXX" maxlength="11" pattern="[0-9]*">
+                                </div>
+                            </div>
+
+                            <div class="payment-option">
+                                <input type="radio" id="settings-payment-card" name="settings-payment" value="Credit/Debit Card">
+                                <label for="settings-payment-card">Credit/Debit Card</label>
+                            </div>
+                            <div id="settings-card-details" class="payment-details" style="display: none;">
+                                <div class="payment-option">
+                                    <input type="radio" id="settings-payment-bdo" name="settings-card-type" value="BDO">
+                                    <label for="settings-payment-bdo">BDO</label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="settings-payment-bpi" name="settings-card-type" value="BPI">
+                                    <label for="settings-payment-bpi">BPI</label>
+                                </div>
+                                <div class="form-group" style="margin-top: 1rem;">
+                                    <label for="settings-card-name">Card Name</label>
+                                    <input type="text" id="settings-card-name" name="settings-card-name" placeholder="Juan Dela Cruz">
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-card-number">Card Number</label>
+                                    <input type="text" id="settings-card-number" name="settings-card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" inputmode="numeric" pattern="[0-9\s]{16,19}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-card-expiry">Expiry Date (MM/YY)</label>
+                                    <input type="text" id="settings-card-expiry" name="settings-card-expiry" placeholder="MM/YY" maxlength="5" inputmode="tel" pattern="(0[1-9]|1[0-2])\/[0-9]{2}">
+                                </div>
+                            </div>
+                            <p style="font-size: 0.9rem; margin-top: 1.5rem;"><em><strong>Prototype Note:</strong> For demonstration only. Do not enter real payment information.</em></p>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="margin-top: 2rem;">
+                            <span class="btn-text">Save Changes</span>
+                            <span class="btn-icon"></span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="account-form-content" id="logout"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

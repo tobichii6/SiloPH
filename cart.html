@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Silo</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <ul class="nav-primary">
+                <li>
+                    <a href="index.html" class="nav-logo">
+                        <img src="https://uploads.onecompiler.io/4438u64ww/4438u3mt4/silo%20logo%203%20black.png" alt="Silo Logo" class="nav-logo-icon" />
+                        <span>SILO</span>
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <ul class="nav-utility">
+                <li><a href="account.html" id="account-nav-link">Account</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="cart.html" class="active" id="cart-link">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Shopping Cart</h1>
+        </section>
+
+        <section class="content-container cart-content">
+            
+            <div class="cart-column cart-summary">
+                <h2>Your Items</h2>
+                <div id="cart-items-container">
+                    </div>
+                <div id="cart-total-summary">
+                    <p>Subtotal: <span id="cart-subtotal">₱0.00</span></p>
+                    <p>Shipping: <span id="cart-shipping">₱50.00</span></p>
+                    <h3>Total: <span id="cart-total">₱50.00</span></h3>
+                </div>
+                <div id="cart-empty-message" style="display: none;">
+                    <p>Your cart is empty.</p>
+                    <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+                </div>
+            </div>
+            
+            <div class="cart-column checkout-form">
+                <div id="checkout-login-prompt" style="display: none;">
+                    <h2>Login to Continue</h2>
+                    <p>Please <a href="account.html">Login or Sign Up</a> to proceed with your order.</p>
+                </div>
+                
+                <form id="checkout-form" style="display: none;">
+                    <h2>Checkout</h2>
+                    <h3>1. Shipping Information</h3>
+                    <div class="form-group">
+                        <label for="checkout-address">Address</label>
+                        <input type="text" id="checkout-address" name="address" required>
+                    </div>
+                    
+                    <h3>2. Payment Method</h3>
+                    <div class="form-group">
+                        <div class="payment-option">
+                            <input type="radio" id="payment-cod" name="payment" value="Cash on Delivery" checked>
+                            <label for="payment-cod">Cash on Delivery</label>
+                        </div>
+                        
+                        <div class="payment-option">
+                            <input type="radio" id="payment-ewallet" name="payment" value="E-Wallet (GCash/Maya)">
+                            <label for="payment-ewallet">E-Wallet (GCash/Maya)</label>
+                        </div>
+                        
+                        <div id="ewallet-details" class="payment-details" style="display: none;">
+                            <div class="payment-option">
+                                <input type="radio" id="payment-gcash" name="ewallet-type" value="GCash">
+                                <label for="payment-gcash">GCash</label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="payment-maya" name="ewallet-type" value="Maya">
+                                <label for="payment-maya">Maya</label>
+                            </div>
+                            <div id="ewallet-number-container" class="form-group" style="display: none; margin-top: 1rem;">
+                                <label for="checkout-ewallet-number">Mobile Number</label>
+                                <input type="tel" id="checkout-ewallet-number" name="ewallet-number" placeholder="09XX XXX XXXX" maxlength="11" pattern="[0-9]*">
+                            </div>
+                        </div>
+
+                        <div class="payment-option">
+                            <input type="radio" id="payment-card" name="payment" value="Credit/Debit Card">
+                            <label for="payment-card">Credit/Debit Card</label>
+                        </div>
+
+                        <div id="card-details" class="payment-details" style="display: none;">
+                            <div class="payment-option">
+                                <input type="radio" id="payment-bdo" name="card-type" value="BDO">
+                                <label for="payment-bdo">BDO</label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="payment-bpi" name="card-type" value="BPI">
+                                <label for="payment-bpi">BPI</label>
+                            </div>
+                            <div class="form-group" style="margin-top: 1rem;">
+                                <label for="checkout-card-name">Card Name</label>
+                                <input type="text" id="checkout-card-name" name="card-name" placeholder="Juan Dela Cruz">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-card-number">Card Number</label>
+                                <input type="text" id="checkout-card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" inputmode="numeric" pattern="[0-9\s]{16,19}">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-card-expiry">Expiry Date (MM/YY)</label>
+                                <input type="text" id="checkout-card-expiry" name="card-expiry" placeholder="MM/YY" maxlength="5" inputmode="tel" pattern="(0[1-9]|1[0-2])\/[0-9]{2}">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" id="place-order-btn">Place Order</button>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

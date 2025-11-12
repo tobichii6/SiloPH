@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Silo</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <ul class="nav-primary">
+                <li>
+                    <a href="index.html" class="nav-logo">
+                        <img src="https://uploads.onecompiler.io/4438u64ww/4438u3mt4/silo%20logo%203%20black.png" alt="Silo Logo" class="nav-logo-icon" />
+                        <span>SILO</span>
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            
+            <ul class="nav-utility">
+                <li><a href="account.html" id="account-nav-link">Account</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="cart.html" id="cart-link">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you. Ask a question or just say hello.</p>
+        </section>
+
+        <section class="content-container contact-content">
+            
+            <div class="contact-column contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="main-contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-column contact-info">
+                <h2>Contact Information</h2>
+                <p>For order concerns, partnerships, or feedback, you can reach us directly.</p>
+                
+                <div class="info-group">
+                    <h3>Email</h3>
+                    <a href="#">silo_services@silo.ph</a>
+                </div>
+                
+                <div class="info-group">
+                    <h3>Follow Us</h3>
+                    <p>Get updates on new designs and our advocacy campaigns.</p>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">X (Twitter)</a>
+                    </div>
+                </div>
+                
+                <div class="info-group">
+                    <h3>Location</h3>
+                    <p>Manila, Philippines</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
